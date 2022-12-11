@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=="UTF-8">
+        <title>Welcome</title>
+    </head>
+
+    <body>
+        <h1>Welcome to the meeting planner</h1>
+        <p>
+            This is a demo application for the course <em>Django: Getting Started</em>
+            on pluralsight<br>
+            Link to the origional course: <a href="https://app.pluralsight.com/paths/skill/building-web-applications-with-django">Django: Getting started</a>
+        </p>
+
+    {% for meeting in meetings %}
+        <a href="/meetings/{{ meeting.id }}">{{ meeting.title }}</a>
+    {% endfor %}
+
+    </body>
+
+</html>
