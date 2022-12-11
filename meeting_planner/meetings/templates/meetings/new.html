@@ -3,7 +3,11 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-    <table>
-        {{ form }}
-    </table>
+    <form method="post">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button type="submit">Create</button>
+    </form>    
 {% endblock %}
